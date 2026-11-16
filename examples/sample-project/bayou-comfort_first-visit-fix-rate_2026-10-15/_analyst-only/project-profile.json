@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "project": {"client_slug": "bayou-comfort", "project_slug": "first-visit-fix-rate", "folder": "bayou-comfort_first-visit-fix-rate_2026-10-15", "created": "2026-10-15", "analyst": "Sample Analyst"},
+  "variables": {
+    "organization": "Bayou Comfort Heating & Air (fictional)",
+    "function": "Operations",
+    "industry": "Home services",
+    "decision": "Whether to fund a $40k technician retraining program in Q1",
+    "metric": "First-visit fix rate",
+    "population": "Residential service calls, all three branches",
+    "time_window": "Q3 2026 (Jul–Sep)",
+    "baseline": "Q3 2025",
+    "data_inventory": ["service_calls_2025_2026.csv — one row per service visit; date, branch, technician_id, job_type, parts_on_truck, fixed_first_visit"],
+    "known_gaps": ["Parts supplier delivery data", "Customer satisfaction surveys", "Technician training records"],
+    "regulatory": ["Internal policy only"],
+    "business_context": "Regional HVAC service company with three branches. First-visit fix rate drives labor cost and customer reviews. Leadership believes newer technicians are the problem and is weighing a retraining program.",
+    "audience": "Owner and operations manager",
+    "roles": ["Finance", "Branch managers"],
+    "output_style": "Short bullets, then a table, plain tone",
+    "framed_question": "How did first-visit fix rate change in Q3 2026 vs Q3 2025, and which segments account for the change?",
+    "evidence_bar": "Probable is enough for a pilot; Confirmed needed for the full $40k program"
+  },
+  "settings": {"depth": "core", "evidence_tags": ["Confirmed", "Probable", "Speculative"], "deliverable_header": "Bayou Comfort Operations", "ai_tool": "Claude", "model_tier": "default", "show_prompts": false, "deliverable_format": "markdown", "rates": "not set (sample shows tokens only)"},
+  "run_state": {"sequence": 11, "last_stage": "4 Communicate and operationalize", "last_prompt": "CO-01", "stages_completed": ["0 Setup", "1 Frame", "2 Prepare and govern", "3 Analyze and verify", "4 Communicate and operationalize"]}
+}

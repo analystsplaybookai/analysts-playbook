@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "client_slug": "",
+    "project_slug": "",
+    "folder": "",
+    "created": "YYYY-MM-DD",
+    "analyst": ""
+  },
+  "variables": {
+    "organization": "",
+    "function": "",
+    "industry": "",
+    "decision": "",
+    "metric": "",
+    "population": "",
+    "time_window": "",
+    "baseline": "",
+    "data_inventory": [],
+    "known_gaps": [],
+    "regulatory": [],
+    "business_context": "",
+    "audience": "",
+    "roles": [],
+    "output_style": ""
+  },
+  "settings": {
+    "depth": "core",
+    "evidence_tags": ["Confirmed", "Probable", "Speculative"],
+    "deliverable_header": "",
+    "ai_tool": "Claude",
+    "model_tier": "default",
+    "show_prompts": false,
+    "deliverable_format": "markdown"
+  },
+  "run_state": {
+    "sequence": 0,
+    "last_stage": "0 Setup",
+    "last_prompt": "",
+    "stages_completed": []
+  }
+}

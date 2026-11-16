@@ -1,0 +1,12 @@
+Seq,Date,Project / Client,Prompt ID,Prompt Name,Framework Stage,AI Tool,Model Tier,What I Changed in the Prompt,Result / What I Learned,Red Flag?,Redos,Turns,Est Input Tokens,Est Reply Tokens,Est Cost (USD),Keep / Revise / Retire,Notes
+1,2026-10-15,Bayou Comfort,SET-01,Standing skeptic instructions,0 Setup,Claude,default,None,Written to project-instructions.md,No,0,0,0,0,,Keep,
+2,2026-10-15,Bayou Comfort,SET-02,Project context brief,0 Setup,Claude,default,None,Written to project-instructions.md,No,0,0,0,0,,Keep,
+3,2026-10-15,Bayou Comfort,INT-01,Premise check before 'why',1 Frame,Claude,default,None,Drop confirmed: 81% to 73% on 4210 visits; concentrated in two branches,No,0,1,16000,500,,Keep,
+4,2026-10-15,Bayou Comfort,INT-03,Scoped analysis request,1 Frame,Claude,default,Used framed question,Three findings logged; job type mix shifted toward heat pumps,No,0,1,17000,900,,Keep,
+5,2026-10-15,Bayou Comfort,DR-01,Data coverage check,2 Prepare and govern,Claude,default,None,All 4210 rows used; 37 rows missing technician_id excluded,No,0,1,18000,400,,Keep,
+6,2026-10-16,Bayou Comfort,AV-11,Climb the ladder: diagnose,3 Analyze and verify,Claude,default,Segments = branch and job type,Drop concentrated in heat-pump jobs where parts_on_truck = No,No,0,1,19000,1100,,Keep,
+7,2026-10-16,Bayou Comfort,AV-02,Surface hidden assumptions,3 Analyze and verify,Claude,default,None,Assumed parts_on_truck is recorded consistently across branches,No,0,1,20000,600,,Keep,
+8,2026-10-16,Bayou Comfort,AV-01,Six-point reliability sweep,3 Analyze and verify,Claude,default,Segment = technician tenure,First run marked all six Pass with no numbers; redo gave tenure split,Yes,1,2,42000,1500,,Revise,Add 'show the number for each check' to prompt
+9,2026-10-16,Bayou Comfort,AV-03,Evidence label per finding,3 Analyze and verify,Claude,default,None,Parts finding Confirmed; tenure finding Speculative,No,0,1,22000,700,,Keep,
+10,2026-10-16,Bayou Comfort,AV-07,Argue against my conclusion,3 Analyze and verify,Claude,default,None,Strongest counter: supplier delays; data cannot test it; owner = purchasing,No,0,1,23000,800,,Keep,
+11,2026-10-17,Bayou Comfort,CO-01,Draft a one-page pre-read brief,4 Communicate and operationalize,Claude,default,Audience = owner and ops manager,Brief drafted; recommendation narrowed to parts-stocking pilot,No,0,1,24000,900,,Keep,
