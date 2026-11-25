@@ -6,7 +6,7 @@ description: >
   confidence bar", or wants to turn a stakeholder request into a well-scoped analysis
   question before touching the data. Stage 1 (Frame) of the Analyst's Playbook.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Stage 1: Frame the Question

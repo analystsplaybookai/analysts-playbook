@@ -8,7 +8,7 @@ description: >
   analyst-only folder. Uses the METER method (Model tier, Extract size, Turns,
   Errors/redos, Reply length).
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Cost Plan, Run Log, and Cost Audit

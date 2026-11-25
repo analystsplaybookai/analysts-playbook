@@ -8,7 +8,7 @@ description: >
   explanations, and confidence triage. Stage 3 (Analyze and verify) of the Analyst's
   Playbook.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Stage 3: Analyze and Verify
@@ -49,6 +49,26 @@ result ("are you sure?", "that seems wrong"): replace generic pushback with AV-0
 specific claim, and hold the position unless new facts appear.
 
 ## Stage-specific rules
+
+- **Diagnose across every dimension, then look at what's left.** In pass A, break the
+  before/after change down across every dimension in the data (for example location, payer
+  or customer type, channel, product or visit type, age band). Then remove the leading
+  driver and ask: "What change is left, and where does it sit?" Repeat until the remainder
+  is small or has no clear home. Never close the diagnosis on the first driver found.
+- **Look for the fingerprint before calling a cause unconfirmed.** When comments,
+  interviews, or the request suggest a cause, check whether it leaves a pattern in the
+  structured data (for example a price change shows up as segment × date, compared with
+  groups the change didn't touch) before labeling it "comments only" or unconfirmed.
+- **Paired comparisons are paired.** Any "same customer / same patient / same store"
+  comparison must be calculated per unit, then averaged. A comparison that pools all rows
+  from both groups is a between-group comparison and must be labeled as one.
+- **Size the whole change.** When a finding's impact is sized (cost, revenue, volume), size
+  the total change as a low–high range and split it across every driver found, with an
+  explicit "unexplained" share, so a missing driver shows up as a gap instead of vanishing.
+- **Decision triggers clear a higher bar.** Any number that will become a condition in a
+  recommendation (a scale-up trigger, a go/no-go threshold) must be tagged at the top
+  evidence level and have passed AV-01 and the paired-comparison rule. Otherwise it can
+  only appear as a "watch" item, not a condition. Mark trigger findings in the scorecard.
 
 - **One finding at a time.** In passes B and C, work finding by finding; draft [FINDING] or
   [CONCLUSION] from the scorecard and confirm with the analyst in one question that lists

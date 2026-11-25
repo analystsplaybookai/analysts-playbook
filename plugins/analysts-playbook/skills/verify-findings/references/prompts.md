@@ -206,10 +206,14 @@ Proposed cause: [CAUSE] (began [DATE]). Effect: [EFFECT] (first visible [DATE]).
 **Prompt:**
 
 ```text
-Act as an experienced [FUNCTION] analyst at [ORGANIZATION]. Using [DATA] for [PERIOD], diagnose what is driving the change in [METRIC]. Break it out by the segments that matter most, separate confirmed drivers from suspected ones, and note what data would confirm the suspected ones.
+Act as an experienced [FUNCTION] analyst at [ORGANIZATION]. Using [DATA] for [PERIOD], diagnose what is driving the change in [METRIC].
+1. Compare the before and after periods across every dimension in the data, not only the obvious one, and show the change by segment.
+2. Name the leading driver, then remove it and report what change remains and where it sits. Repeat until what is left is small or has no clear home.
+3. For any cause suggested by comments, interviews, or the request, say what pattern it would leave in the structured data and whether that pattern is there.
+4. Separate confirmed drivers from suspected ones, give each a share of the total change (with an "unexplained" share), and note what data would confirm the suspected ones.
 ```
 
-**Good / Red flag:** Good: segment-level drivers with evidence labels. Red flag: one uniform cause for everyone.
+**Good / Red flag:** Good: segment-level drivers with evidence labels, a remainder check after the leading driver, and shares that add to the total. Red flag: one uniform cause for everyone, or the diagnosis stops at the first driver found.
 
 
 ---

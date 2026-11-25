@@ -34,9 +34,10 @@ Update later with `/plugin` → **Marketplaces** → **analysts-playbook** → *
 |---|---|---|
 | `start-project` | 0 Setup | Interviews you for every project variable once, builds the project folder, writes the reviewer stance and context brief, and plans cost. |
 | `frame-question` | 1 Frame | De-biases the question, checks the premise, scopes the first pass, sets the evidence bar. |
-| `prepare-data` | 2 Prepare and govern | Sensitivity and regulatory check, coverage check, fair-comparison check, missing-data owners. |
+| `prepare-data` | 2 Prepare and govern | Sensitivity and regulatory check, coverage check, fair-comparison check (paired per unit), missing-data owners, data-quality log. |
 | `verify-findings` | 3 Analyze and verify | Diagnose, surface assumptions, reliability sweep, evidence labels, stress and pressure tests, scenarios, actions, confidence triage. |
 | `deliver-brief` | 4 Communicate and operationalize | Scope-matched recommendation, working hypothesis, one-page pre-read, brief audit, anticipated questions. |
+| `stakeholder-package` | 5 Stakeholder package (optional) | Slide deck, email draft and voiceover video from the approved brief, with email/slide reconciliation, a required video review, and an analyst-only prompts-and-replies review. Nothing reaches the client folder until you approve it. |
 | `cost-and-log` | Throughout | METER cost plan before work, a log row for every prompt run, and a cost audit at close. |
 
 Every project folder looks like this:

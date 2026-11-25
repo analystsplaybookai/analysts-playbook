@@ -15,6 +15,7 @@ Each project lives in one folder inside the analyst's working directory:
     anticipated-questions.md        (when produced)
     working-hypothesis.md           (when produced)
     action-scope-note.md            (when produced)
+    (stakeholder email, video, deck export: only after the analyst approves them)
   _analyst-only/              NEVER SHARE. Costs, logs, raw responses, internal checks.
     README-DO-NOT-SHARE.md
     project-profile.json            interview answers + run state
@@ -23,6 +24,9 @@ Each project lives in one folder inside the analyst's working directory:
     cost-audit.md                   METER review after work ends
     prompt-log.csv                  one row per prompt run
     verification-scorecard.md       running list of findings and their status
+    data-quality-log.md             every data problem found and how it was handled
+    analysis-prompts-and-replies.html  review document (stakeholder-package)
+    stakeholder-package/            email draft, video tool prompt, QA notes
     responses/                      raw output of every prompt run
       001_INT-03.md
       002_AV-02.md
@@ -40,11 +44,21 @@ Files in `01_deliverables/` must never contain:
 - Raw AI transcripts, red-flag notes, or reviewer commentary
 - Personal, confidential, or regulated data flagged during the governance check
 - Any mention that a checklist or harness was used. Write as the analyst's own work.
+- Links to AI tools or artifact pages (for example claude.ai links) and the names of the
+  AI, slide, or video tools used to make the work (for example Claude, HeyGen).
+  Link or attach a shared or exported copy instead.
+- Working files: review logs, tool prompts, QA notes, and drafts the analyst has not
+  approved. These go to `_analyst-only/` by default, including files made after the brief
+  (slides, email, video).
 
 Deliverables may describe confidence in plain words ("confirmed", "directional, pending X").
 
 Everything else (responses, scorecard, logs, costs) goes to `_analyst-only/`.
-Before writing any deliverable, scan it for the forbidden items above and remove them.
+
+**Whole-folder screen (a gate, not a one-time check).** Whenever any file is written to
+`01_deliverables/`, scan **every** file in that folder for the forbidden items above, not
+only the new file. Fix the content, or move the file to `_analyst-only/` and tell the
+analyst. If a file can't be moved from here, name it and ask the analyst to delete it.
 
 ## 3. Filling placeholders
 
@@ -133,6 +147,7 @@ result "Skipped".
 | 2 Prepare and govern | prepare-data | DR-01 – DR-04 |
 | 3 Analyze and verify | verify-findings | AV-01 – AV-14 |
 | 4 Communicate and operationalize | deliver-brief | CO-01 – CO-05 |
+| 5 Stakeholder package (optional) | stakeholder-package | Deck, email draft, video, reviews |
 | Cost and log | cost-and-log | METER plan, audit, close-out |
 
 At the end of each stage, summarize in 3–5 lines what changed in the scorecard and suggest

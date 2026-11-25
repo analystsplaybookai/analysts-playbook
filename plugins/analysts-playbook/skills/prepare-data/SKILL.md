@@ -7,7 +7,7 @@ description: >
   comparability, sensitivity, and repeatability before trusting results. Stage 2 (Prepare
   and govern) of the Analyst's Playbook.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Stage 2: Prepare and Govern the Data
@@ -43,6 +43,17 @@ produced by fixed calculations rather than AI narration.
   (update the profile's `settings.extract_note`) so the cost plan reflects it.
 - **Coverage.** If DR-01 shows used < total without a stated reason, rerun on the full set
   and record what changed. Count it as a redo.
+- **Data-quality log.** Record every data problem found in this stage (gaps in dates or
+  locations, duplicates removed, blank or invalid fields, late-arriving data) in
+  `_analyst-only/data-quality-log.md`, with its size and how it was handled. The brief
+  must account for every item on this log, so log it even if it looks minor.
+- **One cleaned extract.** Once cleaning is decided, save the cleaned data (or the code that
+  produces it) once and take every count and rate in later stages from it. Record the
+  cleaned record count in the data-quality log. Never quote a raw count next to a cleaned one.
+- **Paired and timing checks.** When DR-03 involves the same units in both groups, calculate
+  the comparison per unit and then average it; pooling rows does not count as paired. Check
+  whether exposure timing lines up with something else (stage of a customer's life cycle,
+  calendar month, a price or policy change).
 - **Owners.** Save DR-02's owner list (system, team, one question each) to the scorecard's
   "Next check / owner" column. These become the "who else to ask" step before recommending.
 

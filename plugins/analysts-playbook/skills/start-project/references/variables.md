@@ -24,7 +24,7 @@ Offer the listed options; the analyst can type their own answer.
 | metric | [METRIC] | Which metric is at the center of the question? | (offer column names from the data if loaded) | INT-01, INT-03, AV-11–13, DR-03 |
 | population | [POPULATION / SEGMENT DEFINITION] | Which population or segment is in scope? | All customers · A named segment · A region or site | INT-03 |
 | time_window | [TIME WINDOW], [PERIOD] | What time window should the analysis cover? | Last full quarter · Last 12 months · Year to date | INT-01, INT-03, AV-11 |
-| baseline | [BASELINE] | What should it be compared with? | Same period last year · Prior period · Target or budget | INT-03 |
+| baseline | [BASELINE] | What should it be compared with? (Pick all that apply; the brief reports every one.) | Same period last year · Prior period · Target or budget | INT-03 |
 
 ### Round 3: Data and constraints
 

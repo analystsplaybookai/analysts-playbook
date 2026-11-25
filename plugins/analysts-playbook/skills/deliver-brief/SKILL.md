@@ -7,7 +7,7 @@ description: >
   into a stakeholder-ready deliverable. Writes only client-safe files to 01_deliverables.
   Stage 4 (Communicate and operationalize) of the Analyst's Playbook.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Stage 4: Communicate and Operationalize
@@ -24,6 +24,7 @@ with prepared answers to the hard questions.
    "Share as hypothesis", tell the analyst and recommend finishing verify-findings first.
 4. Read `references/prompts.md` for the exact prompt text, placeholders, and checks.
 5. Read `references/deliverable-format.md` for file layout and header rules.
+6. Read `_analyst-only/data-quality-log.md` (from prepare-data) if it exists.
 
 ## Run order
 
@@ -32,7 +33,7 @@ with prepared answers to the hard questions.
 | 1 | CO-04 Match action scope to evidence scope | Extended — **run at Core depth if the recommendation is costly or organization-wide** | `01_deliverables/action-scope-note.md` (only if the analyst wants it shared) |
 | 2 | CO-05 Write up a working hypothesis | Extended | `01_deliverables/working-hypothesis.md` (when a "Share as hypothesis" finding exists) |
 | 3 | CO-01 Draft a one-page pre-read brief | Core | `01_deliverables/pre-read-brief.md` |
-| 4 | CO-02 Brief readiness audit | Extended — **always run a silent check of its six criteria at Core depth** | Fixes applied to the brief; audit saved analyst-only |
+| 4 | CO-02 Brief readiness audit | Extended — **always run a silent check of its eight criteria at Core depth** | Fixes applied to the brief; audit saved analyst-only |
 | 5 | CO-03 Anticipated questions and prepared answers | Extended | `01_deliverables/anticipated-questions.md` |
 
 ## Stage-specific rules
@@ -43,10 +44,21 @@ with prepared answers to the hard questions.
 - **Two copies of every response.** Save the raw prompt response to
   `_analyst-only/responses/` as usual. Write a cleaned client version to `01_deliverables/`
   following `references/deliverable-format.md`.
-- **Screen before writing.** Before saving any file to `01_deliverables/`, check it against
-  conventions §2 (no costs, prompt IDs, tool or tier words, raw transcripts, regulated data).
-  Fix anything found, then save.
-- **Brief audit.** Run CO-02's six checks on the draft brief. Apply rewrites marked Fix. Save
+- **Every baseline.** Report the change against every baseline in the profile (for example
+  prior period and same period last year), not only the one that tells the cleanest story.
+- **Claim-to-number check.** Before saving, check every comparative word in the draft
+  ("flat", "no more than", "same rate", "higher", "outlier", "driven by") against the exact
+  figures it describes, signs included. Reword any that the numbers don't support.
+- **Account for the data-quality log.** Every item in `_analyst-only/data-quality-log.md`
+  must appear in the brief's limitations or in the "is the data bad?" answer, or be marked
+  "not material" in the log with a reason. Take every count from the cleaned extract.
+- **Size the whole change.** Any cost or impact figure covers the total change as a range,
+  split across the drivers found, with the unexplained share stated.
+- **Screen the whole folder.** Before and after saving any file to `01_deliverables/`, check
+  **every** file in that folder against conventions §2, not only the file being written.
+  Fix or move anything found, then save. Working files (review logs, tool prompts, drafts
+  not yet approved) go to `_analyst-only/` by default.
+- **Brief audit.** Run CO-02's eight checks on the draft brief. Apply rewrites marked Fix. Save
   the audit result to `_analyst-only/responses/` only.
 - **Scope match.** If CO-04 recommends a smaller pilot, update the brief's recommendation to
   the pilot plus its scale-up trigger, and tell the analyst.
@@ -57,5 +69,7 @@ with prepared answers to the hard questions.
 
 1. Update `run_state.stages_completed` with "4 Communicate and operationalize".
 2. Invoke the cost-and-log skill in **audit** mode to write `_analyst-only/cost-audit.md`.
-3. Tell the analyst: the deliverables written (file names only), anything held back and why,
-   and the one-line cost audit summary. Remind them that only `01_deliverables/` is for sharing.
+3. Run the whole-folder screen one last time on `01_deliverables/`.
+4. Tell the analyst: the deliverables written (file names only), anything held back and why,
+   and the one-line cost audit summary. Remind them that only `01_deliverables/` is for sharing, and offer the stakeholder-package
+   skill if they need a deck, email, or video.

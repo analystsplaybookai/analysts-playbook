@@ -1,6 +1,6 @@
 {
   "name": "analysts-playbook",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Interview-driven AI harness for data analysis: frame the question, prepare and govern the data, analyze and verify, then deliver a stakeholder-ready brief. Costs and run logs stay in an analyst-only folder.",
   "author": {
     "name": "The Analyst's Playbook",

@@ -54,9 +54,10 @@ For the finding "[FINDING]": (1) what data outside this dataset would be needed 
 
 ```text
 I'm comparing [GROUP A] with [GROUP B] on [METRIC]. Before accepting the difference, test whether they are comparable: do they differ in mix (customer type, issue complexity, size, tenure, region), volume, measurement method, or time period? List each difference you can see in the data, estimate whether it could explain the gap, and suggest a fairer comparison (e.g., within matched segments).
+If the same units (customers, patients, stores) appear in both groups, calculate the difference for each unit first and then average it; do not pool all rows. Also check whether the timing of being in each group lines up with something else, such as how far along the unit is, the calendar month, or a price or policy change.
 ```
 
-**Good / Red flag:** Good: identifies mix differences and proposes matched comparison. Red flag: treats raw averages as apples-to-apples.
+**Good / Red flag:** Good: identifies mix differences, proposes a matched comparison, and computes paired differences per unit. Red flag: treats raw averages as apples-to-apples, or calls a pooled comparison "same customers".
 
 
 ---

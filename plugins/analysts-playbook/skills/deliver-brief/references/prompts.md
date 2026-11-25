@@ -19,10 +19,11 @@ Fill placeholders using conventions §3 and the variable registry. Judge every o
 ```text
 Draft a one-page pre-read using only what we've verified in this conversation. Four sections:
 1. Finding (1–2 sentences): the metric, the segment, the time period, the size of change. No causes or advice.
-2. Confidence (1–2 sentences): what is confirmed, what is directional, and what evidence would close the gap.
+2. Confidence (1–2 sentences): what is confirmed, what is directional, and what evidence would close the gap. Report the change against every baseline we set.
 3. Recommendation (1–3 sentences): a specific action, an owner, and a date. Nothing beyond what the evidence supports.
 4. Rationale (short paragraph): the alternatives we considered and why the evidence points away from them or leaves them open.
 Audience: [AUDIENCE]. It must make sense without me in the room.
+Before finishing, check every comparative word ("flat", "no more than", "higher", "outlier") against the exact figures, and list any data-quality issue we logged that the reader needs to know.
 ```
 
 **Good / Red flag:** Good: Finding contains no 'because'. Red flag: recommendation like 'investigate retention' with no action, owner, or date.
@@ -40,7 +41,7 @@ Audience: [AUDIENCE]. It must make sense without me in the room.
 **Prompt:**
 
 ```text
-Audit this brief: [PASTE BRIEF]. Check and report Pass/Fix for each: (1) Finding names a metric, segment, and time period and contains no cause; (2) Confidence statement separates confirmed from directional; (3) Recommendation is specific, dated, owned, and traceable to the finding; (4) the scope and cost of the action match the scope of the evidence; (5) Rationale addresses at least one alternative explanation; (6) a reader with no context could act on it in five minutes. Suggest exact rewrites for anything marked Fix.
+Audit this brief: [PASTE BRIEF]. Check and report Pass/Fix for each: (1) Finding names a metric, segment, and time period and contains no cause; (2) Confidence statement separates confirmed from directional; (3) Recommendation is specific, dated, owned, and traceable to the finding; (4) the scope and cost of the action match the scope of the evidence; (5) Rationale addresses at least one alternative explanation; (6) a reader with no context could act on it in five minutes; (7) every comparative word matches the figures it describes, and every baseline is reported; (8) every logged data-quality issue is mentioned or explained as not material. Suggest exact rewrites for anything marked Fix.
 ```
 
 **Good / Red flag:** Good: line-level rewrites. Red flag: passes a brief whose recommendation outruns its evidence.

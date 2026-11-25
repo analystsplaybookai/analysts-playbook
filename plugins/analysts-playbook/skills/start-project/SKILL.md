@@ -8,7 +8,7 @@ description: >
   project folder with a client-facing deliverables area and an analyst-only area for costs,
   logs and raw responses, and writes the cost plan before analysis starts.
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Start a Playbook Project
@@ -74,8 +74,8 @@ metric and decision (e.g., `first-visit-fix-rate-q3`). Then write:
 1. `_analyst-only/project-profile.json` from `templates/project-profile.json`, filled.
 2. `_analyst-only/project-instructions.md` from `templates/project-instructions.md`, with every
    `{{…}}` replaced. This is SET-01 (reviewer stance) plus SET-02 (context brief) combined.
-3. `_analyst-only/README-DO-NOT-SHARE.md`, `prompt-log.csv`, `verification-scorecard.md`
-   from templates, unchanged.
+3. `_analyst-only/README-DO-NOT-SHARE.md`, `prompt-log.csv`, `verification-scorecard.md`,
+   `data-quality-log.md` from templates, unchanged.
 4. Empty folders `_analyst-only/responses/` and `01_deliverables/`.
 5. Log the setup as two rows in `prompt-log.csv`: SET-01 "Standing skeptic instructions" and
    SET-02 "Project context brief", stage "0 Setup", result "Written to project-instructions.md".

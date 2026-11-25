@@ -6,7 +6,8 @@ An AI harness for data analysts. Run `/analysts-playbook:start-project` to begin
 stage recommends the next.
 
 **Flow:** Setup → Frame → Prepare and govern → Analyze and verify → Communicate and operationalize,
-with cost planning at the start and a cost audit at the end.
+with cost planning at the start and a cost audit at the end. An optional Stakeholder package
+stage turns the approved brief into a deck, email draft, and voiceover video.
 
 **Depth:** Core (11 essential prompts, lowest cost) or Extended (all 29). Chosen in the
 interview; any single prompt can be added or skipped.
