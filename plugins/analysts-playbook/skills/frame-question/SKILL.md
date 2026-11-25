@@ -6,7 +6,7 @@ description: >
   confidence bar", or wants to turn a stakeholder request into a well-scoped analysis
   question before touching the data. Stage 1 (Frame) of the Analyst's Playbook.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Stage 1: Frame the Question
@@ -21,6 +21,8 @@ how sure the analysis needs to be before anyone acts.
 3. Load the project: find `_analyst-only/project-profile.json`. If none exists, invoke the
    start-project skill first and stop.
 4. Read `references/prompts.md` for the exact prompt text, placeholders, and checks.
+5. Check the profile's `risk.final_tier` and apply its controls (conventions §10). If the
+   scope, data source, or audience has changed since it was scored, rescore first.
 
 ## Run order
 

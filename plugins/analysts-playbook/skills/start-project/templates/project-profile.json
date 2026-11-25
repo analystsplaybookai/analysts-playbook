@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "project": {
     "client_slug": "",
     "project_slug": "",
@@ -26,12 +26,36 @@
   },
   "settings": {
     "depth": "core",
-    "evidence_tags": ["Confirmed", "Probable", "Speculative"],
+    "evidence_tags": [
+      "Confirmed",
+      "Probable",
+      "Speculative"
+    ],
     "deliverable_header": "",
     "ai_tool": "Claude",
     "model_tier": "default",
     "show_prompts": false,
-    "deliverable_format": "markdown"
+    "deliverable_format": "markdown",
+    "loaded_hourly_rate": null,
+    "baseline_hours": null
+  },
+  "risk": {
+    "analyst_tier": "",
+    "ai_tier": "",
+    "factors": {
+      "impact": "",
+      "reversibility": "",
+      "data_sensitivity": "",
+      "audience": "",
+      "wrong_data_in": "",
+      "decision_trigger": ""
+    },
+    "follow_ups": [],
+    "final_tier": "",
+    "decided_by": "",
+    "fluency_cap": "not set",
+    "scored_on": "",
+    "rescores": []
   },
   "run_state": {
     "sequence": 0,

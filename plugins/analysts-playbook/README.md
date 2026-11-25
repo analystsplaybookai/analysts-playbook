@@ -16,6 +16,10 @@ interview; any single prompt can be added or skipped.
 and verification notes go to `_analyst-only/`. Deliverables are screened so they never
 contain costs, prompt IDs, or tool references.
 
+**Four dials:** every prompt is tagged with the dial it moves most (Cost, Trust, Fluency,
+Risk). Each project gets a low / medium / high risk tier at setup, scored separately by the
+analyst and the AI; the tier sets the review controls for every later stage.
+
 **Guardrails:** every stage checks the regulatory and policy constraints captured in the
 interview (HIPAA, GDPR/CCPA, financial rules, internal policy) before touching data.
 

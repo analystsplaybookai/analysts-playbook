@@ -8,7 +8,7 @@ Fill placeholders using conventions §3 and the variable registry. Judge every o
 ---
 
 ## INT-01 · Premise check before 'why'  
-**Depth:** Core · **Pairs with:** INT-02, AV-01
+**Depth:** Core · **Pairs with:** INT-02, AV-01 · **Dial:** Fluency
 
 **When to use:** Use whenever a request starts with 'why did X happen' – confirm X actually happened before explaining it.
 
@@ -26,7 +26,7 @@ Before explaining any cause, confirm the premise. I believe [METRIC] [rose/fell]
 ---
 
 ## INT-02 · De-bias a leading question  
-**Depth:** Extended · **Pairs with:** INT-01, AV-07
+**Depth:** Extended · **Pairs with:** INT-01, AV-07 · **Dial:** Fluency
 
 **When to use:** Use when you already suspect the answer and want to avoid steering AI toward it.
 
@@ -44,7 +44,7 @@ Here is the question I was about to ask: "[YOUR QUESTION]". Before answering, (1
 ---
 
 ## INT-03 · Scoped analysis request  
-**Depth:** Core · **Pairs with:** AV-02, DR-01
+**Depth:** Core · **Pairs with:** AV-02, DR-01 · **Dial:** Fluency · also Cost
 
 **When to use:** Default structure for any first-pass analysis instead of 'tell me what's going on'.
 
@@ -62,7 +62,7 @@ Analyze [METRIC] for [POPULATION / SEGMENT DEFINITION] over [TIME WINDOW], compa
 ---
 
 ## INT-04 · Set the decision & confidence bar  
-**Depth:** Extended · **Pairs with:** AV-14, CO-04
+**Depth:** Extended · **Pairs with:** AV-14, CO-04 · **Dial:** Trust · also Risk
 
 **When to use:** Use at intake (and revisit before sharing) to decide how sure you need to be for the action at stake.
 

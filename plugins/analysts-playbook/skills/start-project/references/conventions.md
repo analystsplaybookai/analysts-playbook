@@ -27,6 +27,7 @@ Each project lives in one folder inside the analyst's working directory:
     data-quality-log.md             every data problem found and how it was handled
     analysis-prompts-and-replies.html  review document (stakeholder-package)
     stakeholder-package/            email draft, video tool prompt, QA notes
+    drafts/                         high-risk drafts awaiting reviewer approval
     responses/                      raw output of every prompt run
       001_INT-03.md
       002_AV-02.md
@@ -142,7 +143,7 @@ result "Skipped".
 
 | Stage | Skill | Prompt IDs |
 |---|---|---|
-| 0 Setup | start-project | SET-01, SET-02 |
+| 0 Setup | start-project | SET-01, SET-02, RISK-01 |
 | 1 Frame | frame-question | INT-01 – INT-04 |
 | 2 Prepare and govern | prepare-data | DR-01 – DR-04 |
 | 3 Analyze and verify | verify-findings | AV-01 – AV-14 |
@@ -152,3 +153,38 @@ result "Skipped".
 
 At the end of each stage, summarize in 3–5 lines what changed in the scorecard and suggest
 the next stage. Do not start the next stage without the analyst's go-ahead.
+
+## 9. The four dials
+
+Every prompt and rule in the Playbook moves one or more of four dials. A healthy AI program
+keeps cost and risk low while building trust and fluency.
+
+| Dial | Goal | What it measures |
+|---|---|---|
+| Cost | Keep low | What a result costs to produce, and what it returns |
+| Trust | Build up | Whether the analyst can stand behind the number and reproduce it |
+| Fluency | Build up | How well analysts frame, prompt, and judge AI work |
+| Risk | Keep low | What goes wrong if the answer or the data is wrong |
+
+Each prompt in the stage references carries a **Dial** tag: the dial it moves most, plus a
+second one where it clearly overlaps. Setup prompts: SET-01 (reviewer stance) is Trust;
+SET-02 (context brief) is Fluency. Use the tags to explain to the analyst why a step matters,
+and in the cost audit to show what the spend bought.
+
+Dial names are internal working language: like depth, they never appear in deliverables.
+
+## 10. Risk tier and controls
+
+start-project sets a risk tier (low / medium / high) before any analysis, using two-way
+scoring (see `risk-tiers.md`). The tier is saved in the profile's `risk` block and sets the
+controls every later stage applies:
+
+| Tier | Controls |
+|---|---|
+| Low | Self-check: run each prompt's Good / Red flag test as usual. |
+| Medium | Second pass: recompute every headline figure independently (code or a second method) before it reaches a deliverable, and run AV-06 on the main conclusion. |
+| High | Peer review and approval gate: everything for medium, plus a named reviewer approves the deliverables before anything is written to `01_deliverables/`. Record the reviewer and date in the scorecard. |
+
+**Rescore when things change.** At the start of each stage, check whether the scope, data
+source, or audience has changed since the tier was set. If so, rerun the scoring and log it.
+A tier can go down only with the analyst's agreement; it goes up automatically.

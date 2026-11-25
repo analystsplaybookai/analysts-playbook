@@ -8,7 +8,7 @@ description: >
   project folder with a client-facing deliverables area and an analyst-only area for costs,
   logs and raw responses, and writes the cost plan before analysis starts.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Start a Playbook Project
@@ -65,6 +65,13 @@ Rules:
 Show a short summary table of the answers (variable → value) and ask the analyst to confirm
 or correct. Apply corrections.
 
+## Step 4b: Score the risk tier
+
+Read `references/risk-tiers.md` and run two-way scoring: intake questions, the analyst's
+tier first, then the AI's tier with a one-line reason, follow-ups on any mismatch, higher
+tier by default. Tell the analyst in one line what the final tier means for later stages
+(conventions §10).
+
 ## Step 5: Build the project folder
 
 Create the folder `<client-slug>_<project-slug>_<YYYY-MM-DD>/` with the layout in
@@ -77,8 +84,9 @@ metric and decision (e.g., `first-visit-fix-rate-q3`). Then write:
 3. `_analyst-only/README-DO-NOT-SHARE.md`, `prompt-log.csv`, `verification-scorecard.md`,
    `data-quality-log.md` from templates, unchanged.
 4. Empty folders `_analyst-only/responses/` and `01_deliverables/`.
-5. Log the setup as two rows in `prompt-log.csv`: SET-01 "Standing skeptic instructions" and
-   SET-02 "Project context brief", stage "0 Setup", result "Written to project-instructions.md".
+5. Log the setup as rows in `prompt-log.csv`: SET-01 "Standing skeptic instructions" and
+   SET-02 "Project context brief", stage "0 Setup", result "Written to project-instructions.md";
+   and RISK-01 "Risk tier", result "<final tier>".
 
 Apply the reviewer stance from `project-instructions.md` for the rest of the conversation.
 
@@ -94,5 +102,5 @@ Apply the reviewer stance from `project-instructions.md` for the rest of the con
 
 ## Final message to the analyst
 
-Keep it to: where the project folder is, what is client-facing vs analyst-only (one line
+Keep it to: the risk tier and its controls (one line), where the project folder is, what is client-facing vs analyst-only (one line
 each), the cost-plan one-liner, and the recommended next step.

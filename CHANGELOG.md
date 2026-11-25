@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.3.0 — 2026-11-24
+
+The four dials: Cost, Trust, Fluency, Risk.
+
+- Every prompt carries a **Dial** tag (the dial it moves most, plus any clear overlap);
+  conventions §9 defines the dials.
+- **Two-way risk scoring at setup:** six intake factors (impact, reversibility, data
+  sensitivity, audience, wrong data in, decision trigger). The analyst scores first, then the
+  AI; a mismatch triggers targeted follow-ups, and the higher tier is the default. Sample
+  projects for each tier in `risk-tiers.md`.
+- **The tier sets the controls:** low = self-check; medium = independent recompute of
+  headline figures plus a specific challenge; high = adds a named reviewer's approval before
+  anything reaches `01_deliverables/`. Every stage rescores if scope, source, or audience changes.
+- **ROI in the cost audit** when a hold-out baseline exists; otherwise the audit says ROI
+  wasn't measured instead of guessing.
+- Fluency cap on risk tiers is recorded as "not set" until fluency tiers are defined.
+
 ## 0.2.0 — 2026-11-24
 
 Fixes from the first full test run (a five-location no-show analysis), plus a new stage.

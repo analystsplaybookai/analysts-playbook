@@ -8,7 +8,7 @@ Fill placeholders using conventions §3 and the variable registry. Judge every o
 ---
 
 ## CO-01 · Draft a one-page pre-read brief  
-**Depth:** Core · **Pairs with:** CO-02, CO-03
+**Depth:** Core · **Pairs with:** CO-02, CO-03 · **Dial:** Trust
 
 **When to use:** Turn verified work into a stand-alone document stakeholders read before the meeting.
 
@@ -32,7 +32,7 @@ Before finishing, check every comparative word ("flat", "no more than", "higher"
 ---
 
 ## CO-02 · Brief readiness audit  
-**Depth:** Extended · **Pairs with:** CO-01
+**Depth:** Extended · **Pairs with:** CO-01 · **Dial:** Trust
 
 **When to use:** Run on your draft brief before sending.
 
@@ -50,7 +50,7 @@ Audit this brief: [PASTE BRIEF]. Check and report Pass/Fix for each: (1) Finding
 ---
 
 ## CO-03 · Anticipated questions & prepared answers  
-**Depth:** Extended · **Pairs with:** AV-07, AV-08
+**Depth:** Extended · **Pairs with:** AV-07, AV-08 · **Dial:** Trust
 
 **When to use:** Meeting prep – so you can say 'I checked that' instead of being caught flat.
 
@@ -68,7 +68,7 @@ Based on this brief and our analysis: [PASTE OR SUMMARIZE]. List the [5] toughes
 ---
 
 ## CO-04 · Match action scope to evidence scope  
-**Depth:** Extended · **Pairs with:** AV-09, CO-01
+**Depth:** Extended · **Pairs with:** AV-09, CO-01 · **Dial:** Risk · also Cost
 
 **When to use:** Use before proposing a broad or expensive initiative.
 
@@ -86,7 +86,7 @@ Proposed action: [ACTION] (scope: [WHO/WHAT IT AFFECTS], est. cost/effort: [COST
 ---
 
 ## CO-05 · Write up a working hypothesis  
-**Depth:** Extended · **Pairs with:** AV-14, CO-01
+**Depth:** Extended · **Pairs with:** AV-14, CO-01 · **Dial:** Trust
 
 **When to use:** Use when your best explanation isn't proven yet but belongs in the brief.
 

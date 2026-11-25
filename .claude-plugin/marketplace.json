@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Private plugin marketplace for The Analyst's Playbook: an AI harness for data analysts.",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "analysts-playbook",
       "source": "./plugins/analysts-playbook",
       "description": "Interview-driven AI harness for data analysis: frame the question, prepare and govern the data, analyze and verify, then deliver a stakeholder-ready brief, with cost planning and run logs kept analyst-only.",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "category": "productivity"
     }
   ]

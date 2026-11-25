@@ -8,7 +8,7 @@ description: >
   voiceover video, with reconciliation and review steps. Working files stay analyst-only.
   Optional stage 5 of the Analyst's Playbook, run after deliver-brief.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Stage 5 (optional): Stakeholder Package
@@ -21,7 +21,9 @@ document of the analysis prompts and replies.
 
 1. Read `../start-project/references/conventions.md` and apply it throughout. Section 2
    (client-facing rules and the whole-folder screen) is mandatory.
-2. Load the project profile. If deliver-brief has not finished (no `pre-read-brief.md` in
+2. Load the project profile and apply the controls for `risk.final_tier` (conventions §10).
+   For a high tier, the step 8 approval must come from the named reviewer as well.
+3. If deliver-brief has not finished (no `pre-read-brief.md` in
    `01_deliverables/`), say so and recommend running deliver-brief first.
 
 ## Folder rules (apply to every step)

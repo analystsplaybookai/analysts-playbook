@@ -7,7 +7,7 @@ description: >
   into a stakeholder-ready deliverable. Writes only client-safe files to 01_deliverables.
   Stage 4 (Communicate and operationalize) of the Analyst's Playbook.
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Stage 4: Communicate and Operationalize
@@ -25,6 +25,8 @@ with prepared answers to the hard questions.
 4. Read `references/prompts.md` for the exact prompt text, placeholders, and checks.
 5. Read `references/deliverable-format.md` for file layout and header rules.
 6. Read `_analyst-only/data-quality-log.md` (from prepare-data) if it exists.
+7. Check the profile's `risk.final_tier` and apply its controls (conventions §10). If the
+   scope, data source, or audience has changed since it was scored, rescore first.
 
 ## Run order
 
@@ -54,6 +56,8 @@ with prepared answers to the hard questions.
   "not material" in the log with a reason. Take every count from the cleaned extract.
 - **Size the whole change.** Any cost or impact figure covers the total change as a range,
   split across the drivers found, with the unexplained share stated.
+- **High-tier gate.** If `risk.final_tier` is high, do not write to `01_deliverables/` until a
+  named reviewer has approved the drafts. Keep drafts in `_analyst-only/drafts/` until then.
 - **Screen the whole folder.** Before and after saving any file to `01_deliverables/`, check
   **every** file in that folder against conventions §2, not only the file being written.
   Fix or move anything found, then save. Working files (review logs, tool prompts, drafts

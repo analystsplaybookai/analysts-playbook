@@ -8,7 +8,7 @@ Fill placeholders using conventions §3 and the variable registry. Judge every o
 ---
 
 ## AV-01 · Six-point reliability sweep  
-**Depth:** Core · **Pairs with:** AV-02, AV-03
+**Depth:** Core · **Pairs with:** AV-02, AV-03 · **Dial:** Trust
 
 **When to use:** Run on any AI finding before trusting it; returns a quick scorecard.
 
@@ -33,7 +33,7 @@ End with the single check most likely to change the conclusion.
 ---
 
 ## AV-02 · Surface hidden assumptions  
-**Depth:** Core · **Pairs with:** AV-05
+**Depth:** Core · **Pairs with:** AV-05 · **Dial:** Trust
 
 **When to use:** Verification step 1 – ask right after any analysis or recommendation.
 
@@ -51,7 +51,7 @@ List every assumption you made in this analysis that I did not explicitly state 
 ---
 
 ## AV-03 · Evidence label per finding  
-**Depth:** Core · **Pairs with:** CO-01
+**Depth:** Core · **Pairs with:** CO-01 · **Dial:** Trust
 
 **When to use:** Verification step 3 – separate what the data shows from what AI inferred.
 
@@ -69,7 +69,7 @@ Go through each finding in this analysis and label it: [Supported] – shown dir
 ---
 
 ## AV-04 · Wider-window durability test  
-**Depth:** Extended · **Pairs with:** AV-03, AV-14
+**Depth:** Extended · **Pairs with:** AV-03, AV-14 · **Dial:** Trust
 
 **When to use:** Use when a pattern comes from a short window (e.g., one quarter) – checks whether it's real or noise.
 
@@ -87,7 +87,7 @@ The finding "[FINDING]" comes from [SHORT WINDOW]. Rerun the identical analysis 
 ---
 
 ## AV-05 · Targeted assumption test  
-**Depth:** Extended · **Pairs with:** AV-02, AV-08
+**Depth:** Extended · **Pairs with:** AV-02, AV-08 · **Dial:** Trust
 
 **When to use:** Use when a first analysis blames a specific cause – tests whether the affected group actually matches it.
 
@@ -105,7 +105,7 @@ Our first pass links [FINDING] to [SUSPECTED CAUSE]. Before acting, test that li
 ---
 
 ## AV-06 · Specific challenge (instead of pushback)  
-**Depth:** Core · **Pairs with:** SET-01
+**Depth:** Core · **Pairs with:** SET-01 · **Dial:** Fluency · also Trust
 
 **When to use:** Use instead of 'are you sure?' – generic pushback just makes AI change its answer.
 
@@ -123,7 +123,7 @@ Don't change your answer – defend or qualify it. For "[CLAIM]": (1) what speci
 ---
 
 ## AV-07 · Argue against my conclusion  
-**Depth:** Core · **Pairs with:** AV-08, CO-03
+**Depth:** Core · **Pairs with:** AV-08, CO-03 · **Dial:** Trust
 
 **When to use:** Stress test – find the weakest point before a stakeholder does.
 
@@ -141,7 +141,7 @@ My conclusion: [CONCLUSION]. Using only the data and context already provided, m
 ---
 
 ## AV-08 · Evaluate alternate explanations  
-**Depth:** Extended · **Pairs with:** AV-07, CO-01, CO-03
+**Depth:** Extended · **Pairs with:** AV-07, CO-01, CO-03 · **Dial:** Trust
 
 **When to use:** Pressure test – take competing explanations seriously and decide which belong in the brief.
 
@@ -161,7 +161,7 @@ Generate the [2–3] most plausible alternate explanations a stakeholder might r
 ---
 
 ## AV-09 · Finding-to-conclusion gap scan  
-**Depth:** Extended · **Pairs with:** AV-10, CO-04
+**Depth:** Extended · **Pairs with:** AV-10, CO-04 · **Dial:** Trust · also Risk
 
 **When to use:** Use when moving from 'what the data shows' to 'what it means' – catches overreach.
 
@@ -179,7 +179,7 @@ Finding (data only): [FINDING]. Conclusion I want to draw: [CONCLUSION]. Check t
 ---
 
 ## AV-10 · Sequence & lag check  
-**Depth:** Extended · **Pairs with:** AV-09
+**Depth:** Extended · **Pairs with:** AV-09 · **Dial:** Trust
 
 **When to use:** Use when a cause is suspected – confirms the cause came first and allows for delayed effects.
 
@@ -197,7 +197,7 @@ Proposed cause: [CAUSE] (began [DATE]). Effect: [EFFECT] (first visible [DATE]).
 ---
 
 ## AV-11 · Climb the ladder: diagnose  
-**Depth:** Core · **Pairs with:** AV-12
+**Depth:** Core · **Pairs with:** AV-12 · **Dial:** Trust
 
 **When to use:** Moves a bare fact ('X is down') to a cause. Level 2 of 4.
 
@@ -219,7 +219,7 @@ Act as an experienced [FUNCTION] analyst at [ORGANIZATION]. Using [DATA] for [PE
 ---
 
 ## AV-12 · Climb the ladder: project scenarios  
-**Depth:** Extended · **Pairs with:** AV-13
+**Depth:** Extended · **Pairs with:** AV-13 · **Dial:** Risk
 
 **When to use:** Level 3 – shows leadership what happens if nothing changes.
 
@@ -237,7 +237,7 @@ Continue as the [FUNCTION] analyst. Project [METRIC] for the next [HORIZON] assu
 ---
 
 ## AV-13 · Climb the ladder: recommend actions  
-**Depth:** Extended · **Pairs with:** CO-01, CO-04
+**Depth:** Extended · **Pairs with:** CO-01, CO-04 · **Dial:** Risk
 
 **When to use:** Level 4 – turns diagnosis into options; follow with a human check for outside events AI can't see.
 
@@ -255,7 +255,7 @@ Acting as an advisor in [FUNCTION] and finance, recommend actions to improve [ME
 ---
 
 ## AV-14 · Confidence triage of findings  
-**Depth:** Extended · **Pairs with:** INT-04, CO-05
+**Depth:** Extended · **Pairs with:** INT-04, CO-05 · **Dial:** Trust · also Risk
 
 **When to use:** Final gate – sort findings into share now / test next / hold, so not everything waits for 100%.
 

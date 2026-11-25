@@ -78,6 +78,21 @@ Analyst-only. Estimates, not billing records. Prepared {{date}}.
 | Errors / redos | | |
 | Reply length | | |
 
+## Return on the spend
+ROI = (value of time saved + cost of errors avoided + revenue lift − total AI cost) ÷ total AI cost
+
+| Item | Value | Source |
+|---|---|---|
+| Hours without AI (baseline) | | hold-out comparison |
+| Hours with AI (incl. setup, review, rework) | | prompt log + analyst |
+| Value of time saved | | hours × loaded rate |
+| Errors avoided (if blind-scored) | | review results |
+| Total AI cost (tools, usage, checking time) | | this audit |
+| **ROI** | | |
+
+Or: "ROI not measured: no hold-out baseline." Early projects usually understate ROI;
+re-measure after a few runs. Report ROI per type of task, not as one blended number.
+
 ## Prompts to revise or retire
 | Prompt | Issue | Recommendation |
 |---|---|---|

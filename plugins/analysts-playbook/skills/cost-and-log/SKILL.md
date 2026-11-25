@@ -8,7 +8,7 @@ description: >
   analyst-only folder. Uses the METER method (Model tier, Extract size, Turns,
   Errors/redos, Reply length).
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Cost Plan, Run Log, and Cost Audit
@@ -62,9 +62,15 @@ prompt ID if one applies; for ad hoc prompts use `ADHOC-<n>` and a short name.
    (e.g., "Errors/redos: Over — 5 redos, 3 of them on AV-08").
 4. Flag prompts to Revise or Retire: any prompt with 2+ redos or a red flag on most runs.
    Write the recommendation into the log's Keep / Revise / Retire column.
-5. Write `cost-audit.md` from the template in `references/meter.md`, ending with the three
+5. **ROI (when a baseline exists).** If the profile has `settings.baseline_hours` (time the same
+   kind of work took without AI, from a hold-out comparison) and `settings.loaded_hourly_rate`,
+   compute ROI using the formula in `references/meter.md`. Count analyst time for setup, prompt
+   writing, review, and rework, not just the AI runs. If there is no baseline, write
+   "ROI not measured: no hold-out baseline" and suggest logging the next comparable project
+   without AI. Never estimate a baseline the analyst did not supply.
+6. Write `cost-audit.md` from the template in `references/meter.md`, ending with the three
    changes that would cut cost most on the next run of this type of project.
-6. Return a one-line summary to the caller.
+7. Return a one-line summary to the caller.
 
 ## Rules
 

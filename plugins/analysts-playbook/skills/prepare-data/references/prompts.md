@@ -8,7 +8,7 @@ Fill placeholders using conventions §3 and the variable registry. Judge every o
 ---
 
 ## DR-01 · Data coverage check  
-**Depth:** Core · **Pairs with:** AV-01, SET-02
+**Depth:** Core · **Pairs with:** AV-01, SET-02 · **Dial:** Trust
 
 **When to use:** Use after any summary of text, reviews, surveys, or large files – confirms AI used the whole dataset, not a slice.
 
@@ -26,7 +26,7 @@ Before I rely on this, confirm your coverage: (1) how many records/rows/response
 ---
 
 ## DR-02 · Missing-data & owner inventory  
-**Depth:** Extended · **Pairs with:** AV-08, CO-05
+**Depth:** Extended · **Pairs with:** AV-08, CO-05 · **Dial:** Trust
 
 **When to use:** Use when a finding needs a cause the dataset can't show; turns the gap into a to-do list with human owners.
 
@@ -44,7 +44,7 @@ For the finding "[FINDING]": (1) what data outside this dataset would be needed 
 ---
 
 ## DR-03 · Like-for-like comparison check  
-**Depth:** Extended · **Pairs with:** AV-01
+**Depth:** Extended · **Pairs with:** AV-01 · **Dial:** Trust
 
 **When to use:** Use before comparing two groups, channels, regions, or periods – makes sure the comparison is fair.
 
@@ -63,7 +63,7 @@ If the same units (customers, patients, stores) appear in both groups, calculate
 ---
 
 ## DR-04 · Sensitivity, cost & repeatability check  
-**Depth:** Extended · **Pairs with:** SET-02
+**Depth:** Extended · **Pairs with:** SET-02 · **Dial:** Risk · also Cost
 
 **When to use:** Governance gate before uploading data or reusing a result in a recurring report.
 

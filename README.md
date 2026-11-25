@@ -32,7 +32,7 @@ Update later with `/plugin` → **Marketplaces** → **analysts-playbook** → *
 
 | Skill | Stage | What it does |
 |---|---|---|
-| `start-project` | 0 Setup | Interviews you for every project variable once, builds the project folder, writes the reviewer stance and context brief, and plans cost. |
+| `start-project` | 0 Setup | Interviews you for every project variable once, scores the risk tier with you, builds the project folder, writes the reviewer stance and context brief, and plans cost. |
 | `frame-question` | 1 Frame | De-biases the question, checks the premise, scopes the first pass, sets the evidence bar. |
 | `prepare-data` | 2 Prepare and govern | Sensitivity and regulatory check, coverage check, fair-comparison check (paired per unit), missing-data owners, data-quality log. |
 | `verify-findings` | 3 Analyze and verify | Diagnose, surface assumptions, reliability sweep, evidence labels, stress and pressure tests, scenarios, actions, confidence triage. |
